@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+  -ms-touch-action: none;
+  display: flex;
+  flex-direction: column;
+  touch-action: pan-y;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
