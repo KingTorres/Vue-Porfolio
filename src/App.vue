@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import Navigation from '@/components/navigation.vue'
-import Content from '@/vues/content.vue'
+import { useRoute } from 'vue-router';
+const route = useRoute()
 </script>
 
 <template>
   <div class="app-body">
-    <Navigation />
-    <Content />
+    <Navigation v-if="route.path === '/' || route.path === '/home'" />
+    <RouterView/>
   </div>
 </template>
 

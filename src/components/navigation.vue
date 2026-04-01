@@ -1,12 +1,11 @@
 <script setup lang="ts">
 // import { ref } from 'vue';
-// import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { useNavStore } from '@/stores/nav'
 import homeIcon from '@/assets/svg/home.vue'
 import toolsIcon from '@/assets/svg/tools.vue'
 import folderIcon from '@/assets/svg/folder.vue'
 const navStore = useNavStore()
-// const router = useRouter()
 // const maxHomePage = ref<number>(2)
 // const selectedNav = ref<string>('home')
 function home() {

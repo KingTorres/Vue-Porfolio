@@ -31,6 +31,10 @@ useEventListener(body, 'scroll', () => {
   <div class="content">
     <section id="home">
       <div class="section-title"><div class="bullet"></div>Web Designer</div>
+      <div class="intro-body">
+        <div class="greetings">Hi, Khelawin</div>
+        <div></div>
+      </div>
     </section>
     <section id="skill">
       <div class="section-title"><div class="bullet"></div>Skills</div>
@@ -42,45 +46,5 @@ useEventListener(body, 'scroll', () => {
 </template>
 
 <style scoped>
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  width: 95%;
-  margin: auto;
-}
-
-section {
-  font-size: 4.3vw;
-  border-radius: .5em;
-  box-shadow: 0.2em 0.2em 0.3em #00000065;
-  display: flex;
-  align-items: start;
-  padding: 1em;
-  height: 100vh;
-  background: var(--background-color);
-  scroll-margin-top: 8.5vh;
-}
-
-.section-title {
-  font-size: .85em;
-  display: flex;
-  align-items: center;
-  gap: .5em;
-  width: 100%;
-}
-
-.section-title > div.bullet {
-  width: .6em;
-  height: .6em;
-  border-radius: 50%;
-  background: var(--grey-color);
-}
-@media (orientation: landscape) {
-  section {
-    border-radius: 1em;
-    font-size: calc((1vw + 1vh) * 0.8);
-    scroll-margin-top: 3vh;
-  }
-}
+@import '@/assets/css/content.css';
 </style>

@@ -11,9 +11,14 @@ const router = createRouter({
       path: "/home",
       component: () => import("@/vues/content.vue")
     },
+    // {
+    //   path: "/about",
+    //   component: () => import("@/vues/About.vue")
+    // },
     {
-      path: "/about",
-      component: () => import("@/vues/About.vue")
+      path: '/:catchAll(.*)',
+      name: "NotFound",
+      component: () => import("@/vues/404.vue")
     }
   ],
 })
