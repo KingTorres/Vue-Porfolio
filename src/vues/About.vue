@@ -3,5 +3,5 @@
 // import axios from '@/config/axios';
 </script>
 <template>
-  <div>About</div>
+  <div>Aasdabout</div>
 </template>

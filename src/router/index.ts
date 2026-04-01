@@ -5,7 +5,11 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: () => import("@/vues/Home.vue")
+      component: () => import("@/vues/content.vue")
+    },
+    {
+      path: "/home",
+      component: () => import("@/vues/content.vue")
     },
     {
       path: "/about",
@@ -13,5 +17,4 @@ const router = createRouter({
     }
   ],
 })
-
 export default router
