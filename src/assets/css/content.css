@@ -14,7 +14,6 @@ section {
   flex-direction: column;
   align-items: start;
   padding: 1em;
-  height: 100vh; /* subject to change */
   background: var(--background-color);
   scroll-margin-top: 10vh;
 }
@@ -25,11 +24,14 @@ section {
   align-items: center;
   gap: .5em;
   width: 100%;
+  position: relative;
 }
 
-.section-title > div.bullet {
-  width: .6em;
-  height: .6em;
+.section-title::before {
+  font-size: inherit;
+  content: '';
+  width: .5em;
+  height: .5em;
   border-radius: 50%;
   background: var(--grey-color);
 }
@@ -85,8 +87,24 @@ section {
   width: 28vw;
   height: 28vw;
   aspect-ratio: 1/1;
-  border: 1px solid red;
+  border: 0.1em solid #dfdfdf;
   border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  padding: 6%;
+  background: #ffffff;
+}
+.intro-body .photo > div {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+.intro-body .photo > div > img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.05);
 }
 .about-body {
   background: #f0f0f0;
@@ -111,6 +129,42 @@ section {
   overflow-wrap: break-word;
   word-break: break-word;
   width: 100%;
+}
+.education-body {
+  width: 100%;
+  font-size: 0.8em;
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.education-body > .item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.education-body > .item > .logo {
+  min-width: 3.5em;
+  min-height: 3.5em;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  position: relative;
+  border: 0.1em solid #9c9c9c;
+}
+.education-body > .item > .logo > img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+.education-body > .item > .name {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+}
+.education-body > .item > .name > div:nth-child(2) {
+  font-size: 0.8em;
+  opacity: 0.5;
 }
 @media (orientation: landscape) {
   section {
@@ -155,10 +209,22 @@ section {
     gap: 0.3em;
     padding: 1.5em;
   }
+  .education-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .intro-body .photo {
+    width: 23vw;
+    height: 23vw;
+  }
 }
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .intro-body .photo {
+    width: 15vw;
+    height: 15vw;
+  }
 }
 @media (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) and (orientation: portrait) {
   .intro-body .photo {
@@ -167,4 +233,8 @@ section {
   }
 }
 @media (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) and (orientation: landscape) {
+  .intro-body .photo {
+    width: 13vw;
+    height: 13vw;
+  }
 }

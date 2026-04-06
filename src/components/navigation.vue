@@ -29,7 +29,7 @@ function project() {
     </button>
     <button :class="{ active: navStore.currentSection === 'project' }" @click="project">
       <div class="icon"><folderIcon/></div>
-      <div class="label">WORKS</div>
+      <div class="label">PROJECTS</div>
     </button>
   </div>
 </template>
@@ -55,12 +55,12 @@ function project() {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #ffffff 15%,#cae6ff);
+  background: linear-gradient(to right, #ffffff 40%, transparent);
   top: 0;
   left: 0;
   z-index: -1;
-  backdrop-filter: blur(2vmin);
-  -webkit-backdrop-filter: blur(2vmin);
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
   pointer-events: none;
 }
 .navigation > button {
