@@ -21,10 +21,10 @@
 section {
   height: unset;
   min-height: 90%;
-  margin: 2vh 0;
+  margin: 1em 0;
 }
 .action > button {
-  font-size: 4vw;
+  font-size: 1em;
   padding: 0.4em 1em;
   border-radius: .5em;
   color: var(--accent-color);
@@ -32,7 +32,7 @@ section {
 }
 @media (orientation: landscape) {
   .action > button {
-    font-size: calc((1vw + 1vh) * 0.8);
+    font-size: 1em;
   }
 }
 </style>

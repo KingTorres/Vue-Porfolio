@@ -1,6 +1,5 @@
 <script setup lang="ts">
 // import { ref } from 'vue';
-import { useRouter } from 'vue-router';
 import { useNavStore } from '@/stores/nav'
 import homeIcon from '@/assets/svg/home.vue'
 import toolsIcon from '@/assets/svg/tools.vue'
@@ -36,7 +35,7 @@ function project() {
 </template>
 <style scoped>
 .navigation {
-  font-size: 1vw;
+  font-size: .235em;
   position: sticky;
   top: 2em;
   width: 95%;
@@ -44,7 +43,7 @@ function project() {
   margin-bottom: 2.5em;
   display: flex;
   gap: 5em;
-  padding: 2em 3em;
+  padding: 3em;
   border-radius: 2.5em;
   box-shadow: 0.5em 0.4em .8em #00000056;
   overflow: hidden;
@@ -54,7 +53,7 @@ function project() {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #ffffff41;
+  background: #ffffff;
   top: 0;
   left: 0;
   z-index: -1;
@@ -63,7 +62,7 @@ function project() {
   pointer-events: none;
 }
 .navigation > button {
-  font-size: 3.5em;
+  font-size: 3.3em;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -74,7 +73,7 @@ function project() {
   width: 2em;
   height: fit-content;
   cursor: pointer;
-  filter: grayscale(1) contrast(0.8);
+  filter: grayscale(1) contrast(1.2);
 }
 .navigation > button.active {
   filter: none;
@@ -113,19 +112,16 @@ function project() {
 @media (orientation: landscape) {
   .navigation {
     flex-direction: column;
-    font-size: calc((1vw + 1vh) * 1);
+    font-size: 1em;
     border-radius: 0.5em;
     padding: 1em;
     margin: 0;
-    top: 2vh;
+    top: 1em;
     order: 2;
     width: fit-content;
     height: fit-content;
     gap: .6em;
     box-shadow: 0.2em 0.2em .2em #0000003f;
-  }
-  .navigation::after {
-    background: var(--background-color);
   }
   .navigation > button {
     font-size: 0.6em;

@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
   overscroll-behavior: none;
   font-family: "poppins-regular";
-  background: #e9e9e9;
+  background: #d8d8d8;
 }
 html {
   scroll-behavior: smooth;
@@ -36,11 +36,20 @@ button {
   background: none;
   padding: 0;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+}
+.app-body {
+  font-size: calc((1vw + 1vh) * 1.4);
 }
 @media (orientation: landscape) {
   .app-body {
     display: flex;
-    padding: 2vh 10vw;
+    font-size: calc((1vw + 1vh) * 1);
+    padding: 1em 13em;
     gap: 2.5vh;
   }
 }

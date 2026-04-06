@@ -7,14 +7,14 @@
 }
 
 section {
-  font-size: 4.3vw;
+  font-size: inherit;
   border-radius: .5em;
   box-shadow: 0.2em 0.2em 0.3em #00000065;
   display: flex;
   flex-direction: column;
   align-items: start;
   padding: 1em;
-  height: 100vh;
+  height: 100vh; /* subject to change */
   background: var(--background-color);
   scroll-margin-top: 10vh;
 }
@@ -33,16 +33,123 @@ section {
   border-radius: 50%;
   background: var(--grey-color);
 }
-.intro-body .greetings{
-  font-size: 1.5em;
+.intro-body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 1em;
+  align-items: center;
+}
+.intro-body .greetings {
+  font-size: 1.1em;
   font-family: "poppins-medium";
   width: 100%;
   margin: 0.5em 0;
+  margin-bottom: 0.2em;
+}
+.intro-body .description {
+  width: 100%;
+  font-size: .7em;
+  padding: 0.5em 1.2em;
+  border-radius: 0.6em;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+}
+.intro-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
+  width: 100%;
+  margin: .5em 0;
+  font-size: .9em;
+}
+.intro-button button {
+  display: flex;
+  font-size: inherit;
+  gap: .5em;
+  padding: .4em 0;
+  border-radius: 0.3em;
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0em 0.1em .2em #00000056;
+  justify-content: center;
+}
+.intro-button button svg {
+  height: 1em;
+  width: auto;
+}
+.intro-body .photo {
+  width: 28vw;
+  height: 28vw;
+  aspect-ratio: 1/1;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+.about-body {
+  background: #f0f0f0;
+  margin: 0.6em 0;
+  padding: 1.5em 1em;
+  width: 100%;
+  font-size: 0.8em;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.about-body > .item {
+  display: flex;
+}
+.about-body > .item > .label {
+  text-transform: capitalize;
+  min-width: 7em;
+  opacity: 0.7;
 }
 @media (orientation: landscape) {
   section {
     border-radius: 1em;
-    font-size: calc((1vw + 1vh) * 0.8);
+    font-size: 0.8em;
     scroll-margin-top: 3vh;
+    padding: 1.5em 2em;
   }
+  .intro-body {
+    padding: .5em 0;
+    gap: 1.5em;
+  }
+  .intro-body .photo {
+    height: 10vw;
+    width: 10vw;
+  }
+  .intro-body .greetings {
+    font-size: 1.2em;
+  }
+  .intro-body .description {
+    font-size: .8em;
+    padding: 1em 2em;
+    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+  }
+  .intro-button {
+    margin: 1em 0;
+    gap: 1em;
+    font-size: 0.75em;
+  }
+  .intro-button button {
+    padding: 0.6em 0;
+  }
+  .about-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.3em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+}
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
 }
