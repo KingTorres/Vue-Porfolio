@@ -47,13 +47,15 @@ function project() {
   border-radius: 2.5em;
   box-shadow: 0.5em 0.4em .8em #00000056;
   overflow: hidden;
+  z-index: 1;
+  border: 0.1em solid var(--accent-color);
 }
 .navigation::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: linear-gradient(to right, #ffffff 15%,#cae6ff);
   top: 0;
   left: 0;
   z-index: -1;
@@ -125,6 +127,9 @@ function project() {
   }
   .navigation > button {
     font-size: 0.6em;
+  }
+  .navigation::after {
+    background: #ffffff;
   }
 }
 </style>
