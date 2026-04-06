@@ -107,7 +107,7 @@ const copyEmail = async () => {
           </div>
           <div class="name">
             <div>Upper Bicutan Elementary School</div>
-            <div>2008&ndash;2012</div>
+            <div>2002&ndash;2008</div>
           </div>
         </div>
       </div>
