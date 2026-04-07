@@ -29,7 +29,7 @@ function project() {
     </button>
     <button :class="{ active: navStore.currentSection === 'project' }" @click="project">
       <div class="icon"><folderIcon/></div>
-      <div class="label">PROJECTS</div>
+      <div class="label">WORKS</div>
     </button>
   </div>
 </template>
@@ -124,6 +124,9 @@ function project() {
     height: fit-content;
     gap: .6em;
     box-shadow: 0.2em 0.2em .2em #0000003f;
+    position: fixed;
+    justify-self: end;
+    margin-right: -4.5em;
   }
   .navigation > button {
     font-size: 0.6em;

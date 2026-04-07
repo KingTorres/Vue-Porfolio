@@ -47,10 +47,8 @@ button {
 }
 @media (orientation: landscape) {
   .app-body {
-    display: flex;
     font-size: calc((1vw + 1vh) * 1);
-    padding: 1em 13em;
-    gap: 2.5vh;
+    margin: 1em 13em;
     position: relative;
   }
 }
@@ -62,12 +60,12 @@ button {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .app-body {
     font-size: calc((1vw + 1vh) * 1.2);
-    padding: 1em 5em;
+    margin: 1em 7em;
   }
 }
 @media (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) and (orientation: landscape) {
   .app-body {
-    padding: 1em 5em;
+    margin: 1em 6em;
   }
 
 }
