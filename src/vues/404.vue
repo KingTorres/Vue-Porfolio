@@ -8,8 +8,12 @@
     <section>
       <div class="section-title"><div class="bullet"></div>Oops! 404</div>
       <div class="not-found-body">
-        <div class="avatar"></div>
-        <div class="greetings">Page Not Found</div>
+        <div class="greetings">
+          <div class="avatar">
+            <img src="@/assets/img/avatar/avatar-question.webp" alt="avatar">
+          </div>
+          <div>Page Not Found</div>
+        </div>
         <div class="action">
           <button @click="router.push('/')">Back Home</button>
         </div>
@@ -32,10 +36,21 @@ section {
   height: 65vh;
   margin: 1em 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 0.6em;
   background: #f0f0f0;
+}
+.greetings > .avatar {
+  width: 12em;
+  height: auto;
+  display: flex;
+}
+.greetings > .avatar > img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 .action {
   display: flex;
